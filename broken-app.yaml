@@ -13,35 +13,12 @@ spec:
     automated:
       prune: true
       allowEmpty: true
-    syncOptions:
-      - RespectIgnoreDifferences=true
-      - PrunePropagationPolicy=background
-      - CreateNamespace=true
-  ignoreDifferences:
-    - group: apps
-      kind: Deployment
-      name: example
-      namespace: example
-      jsonPointers:
-        - /spec/replicas
-    - group: apps
-      kind: Deployment
-      name: anotherexampple
-      namespace: example
-      jsonPointers:
-        - /spec/template/metadata/annotations
-    - group: apps
-      kind: Deployment
-      name: athirdexample
-      namespace: example
-      jsonPointers:
-        - /spec/replicas
   source:
     # Repository: https://github.com/argoproj/argo-helm/tree/main/charts/argo-workflows
     # Artifacthub: https://artifacthub.io/packages/helm/argo/argo-workflows
     # Values: https://github.com/argoproj/argo-helm/blob/main/charts/argo-workflows/values.yaml
     repoURL: https://argoproj.github.io/argo-helm
-    targetRevision: 0.45.27
+    targetRevision: 0.45.28
     chart: argo-workflows
     helm:
       valuesObject:
