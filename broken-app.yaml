@@ -13,6 +13,8 @@ spec:
     automated:
       prune: true
       allowEmpty: true
+    syncOptions:
+      - RespectIgnoreDifferences=true
   source:
     # Repository: https://github.com/argoproj/argo-helm/tree/main/charts/argo-workflows
     # Artifacthub: https://artifacthub.io/packages/helm/argo/argo-workflows
